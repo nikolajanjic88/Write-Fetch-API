@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="alert" id="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <p id="alert-message">This is an alert box.</p>
+  </div>
+  <div class="container-fluid">
+    <div class="container">
+      <h1>JS fetch api</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h4>Test</h4>
+        <button class="btn btn-primary" id="createBtn">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="container">
+    <div class="table-responsive" id="table">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Age</th>
+            <th>Created at</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+    <!--Create Modal-->
+    <div class="modal" id="modal">
+      <div class="modal-body">
+        <div class="alert danger" id="alert-danger">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <p id="alert-danger-message">This is an alert box.</p>
+        </div>
+        <h3>Create</h3>
+        <div class="form-group">
+          <label for="name">Enter Name</label>
+          <input class="form-control" type="text" name="name" id="name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="country">Enter Country</label>
+          <input class="form-control" type="text" name="country" id="country" placeholder="Enter country">
+        </div>
+        <div class="form-group">
+          <label for="age">Enter Age</label>
+          <input class="form-control" type="number" name="age" id="age" placeholder="Enter age">
+        </div>
+        <div class="form-group buttons">
+          <button class="btn btn-success" id="saveBtn">Save</button>
+          <button class="btn btn-danger" id="closeBtn">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Update Modal-->
+    <div class="modal" id="updateModal">
+      <div class="modal-body">
+        <div class="alert danger" id="update-alert-danger">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <p id="update-alert-danger-message">This is an alert box.</p>
+        </div>
+        <h3>Update</h3>
+        <input class="form-control" type="hidden" name="id" id="id">
+        <div class="form-group">
+          <label for="update_name">Enter Name</label>
+          <input class="form-control" type="text" name="name" id="update_name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="update_country">Enter Country</label>
+          <input class="form-control" type="text" name="country" id="update_country" placeholder="Enter country">
+        </div>
+        <div class="form-group">
+          <label for="update_age">Enter Age</label>
+          <input class="form-control" type="number" name="age" id="update_age" placeholder="Enter age">
+        </div>
+        <div class="form-group buttons">
+          <button class="btn btn-success" id="updateBtn">Update</button>
+          <button class="btn btn-danger" id="update-closeBtn">Close</button>
+        </div>
+      </div>
+    </div>
+  
+</body>
+</html>
